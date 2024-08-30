@@ -9,5 +9,5 @@ def main():
     
     st.write(df)
 
-if __namer__ == '__main__':
+if __name__ == '__main__':
         main()
