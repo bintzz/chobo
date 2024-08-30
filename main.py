@@ -1,9 +1,11 @@
 import streamlit as st
+from data_ loader import load_data
 
 def main():
     st.title('안녕 세계야')
     st.title('이것도 깃허브에서 추가했다 멋지지~')
 
-    if __namer__ == '__main__':
+    df= load_data()
+
+if __namer__ == '__main__':
         main()
-        
