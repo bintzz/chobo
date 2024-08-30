@@ -6,6 +6,8 @@ def main():
     st.title('이것도 깃허브에서 추가했다 멋지지~')
 
     df= load_data()
+    
+    st.write(df)
 
 if __namer__ == '__main__':
         main()
