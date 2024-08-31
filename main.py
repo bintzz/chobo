@@ -2,8 +2,10 @@ import streamlit as st
 from data_ loader import load_data
 
 def main():
-    st.title('안녕 세계야')
-    st.title('이것도 깃허브에서 추가했다 멋지지~')
+    st.title('안녕 대시보드')
+    
+    start_date = st.date_input("Start date", df['Date'].min())
+    end_date = st.date_input("End date", df['Date'].max())
 
     df= load_data()
     
