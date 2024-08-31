@@ -12,10 +12,13 @@ def main():
     df= load_data()
     
 #특정 날짜 범위 선택
-    st.subheader("Select Date Range")
     df['Date'] = pd.to_datetime(df['Date'])
-    start_date = st.date_input("Start date", df['Date'].min())
-    end_date = st.date_input("End date", df['Date'].max())
+    with st.expander("범위를 선택하세요"):
+          col1,col2 = st.columns(2)
+            with col1 :
+                start_date = st.date_input("Start date", df['Date'].min())
+            with col2 :
+                end_date = st.date_input("End date", df['Date'].max())
 
     ranged_df = df[(df['Date']>= pd.to_datetime(start_date))&(df['Date']>= pd.to_datetime(end_date))]
     ranged_df = ranged_df.reset_index(drop=True)
