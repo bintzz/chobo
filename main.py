@@ -11,3 +11,5 @@ def main():
 
 if __name__ == '__main__':
         main()
+
+'이게 뭐다냐 신기해'
